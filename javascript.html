@@ -6,14 +6,15 @@
 </head>
 <body>
   <input id="night_day" type="button" value="night" onclick="
-  if (document.querySelector('#night_day').value ==='night'){
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
-    document.querySelector('#night_day').value ='day';
+  var target=document.querySelector('body');
+  if (this.value ==='night'){
+    target.style.backgroundColor='black';
+    target.style.color='white';
+    this.value ='day';
   } else{
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-    document.querySelector('#night_day').value ='night';
+    target.style.backgroundColor='white';
+    target.style.color='black';
+    this.value ='night';
   }
   ">
   <h1>Comparison operators & Boolean</h1>
@@ -33,6 +34,15 @@
   document.write('2<br>');
   document.write('3<br>');
   document.write('4<br>');
+  </script>
+  <br>
+  <script>
+    var func = ['john','paul'];
+    document.write(func[0]);
+    document.write(func[1]);
+    document.write(func.length);
+    func.push('kim');
+    document.write(func.length);
   </script>
 
 
