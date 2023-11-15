@@ -7,11 +7,24 @@
 </head>
 <body>
     <script>
-        let memebr = {
+        let member = {
             'programmer' : 'john',
             'designer' : 'paul'
         };
     </script>
-    
+    <script>
+        for(var key in member){
+            document.write(key + ':' + member[key] + '<br>');
+        };
+    </script>
+    <h2>property & mthod</h2>
+    <script>
+        member.showAll = function(){
+            for(var key in member){
+            document.write(key + ':' + this[key] + '<br>');
+        };
+        };
+        member.showAll();
+    </script>
 </body>
 </html>
